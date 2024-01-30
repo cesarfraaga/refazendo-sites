@@ -1,0 +1,102 @@
+<ul>
+    <li>
+        <a href="https://www.mercadolivre.com.br/">
+        <img src="../../assets/logo.webp" id="logoLivre">
+        </a>
+    </li>
+    <li>
+        <div id="pesquisa">
+            <input placeholder="Buscar produtos, marcas e muito mais...">
+            <a href="https://google.com" target="_blank">
+            <img src="../../assets/search-svgrepo-com.svg">
+            </a>
+        </div>
+    </li>
+    @if (this.meliMais && this.logado) {
+    <li>
+        <a href="https://www.mercadolivre.com.br/melimais#origin=redirect-vdp-meliplus" target="_blank">
+        <img src="../../assets/beneficioslogado.webp" id="beneficiosmeli">
+        </a>
+    </li> } @else {
+    <li>
+        <a href="https://www.mercadolivre.com.br/melimais#origin=redirect-vdp-meliplus" target="_blank">
+        <img src="../../assets/beneficiosmeli.webp" id="beneficiosmeli">
+        </a>
+    </li> }
+</ul>
+
+<ul>
+    <div id="listaUm">
+        @if (this.logado) { <li id="envio">
+            <p>Enviar para {{ this.user }} <br>  {{this.enderecoUser}} </p>
+        </li> }
+        @else {
+        <li id="envio">
+            <p>Enviar para <br>  Digite seu CEP </p>
+        </li> }
+        <li>
+            <p>Categorias</p>
+        </li>
+        <li>
+            <p>Ofertas do dia</p>
+        </li>
+        <li>
+            <p>Histórico</p>      
+        </li>
+        <li>
+            <p>Supermercado</p>
+        </li>
+        <li>
+            <p>Moda</p>
+        </li>
+        <li>
+            <p>Vender</p>
+        </li>
+        <li>
+            <p>Contato</p>
+        </li>
+    </div>
+<!--            <a href="http://localhost:4200/">
+                <button id="iconeUser">X</button>
+                <p>{{this.user}}</p>
+            </a>-->
+    <div id="listaDois">
+        @if (this.logado) {
+            <li>
+            <p>AddIcon&User</p>
+             </li>
+        <li>
+            <p>Compras</p>
+        </li>
+        <li>
+            <p>Favoritos</p>
+        </li>
+        <li>
+            <a href="http://localhost:4200/">
+                <img src="../../assets/notifications.svg" id="notifications">
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:4200/">
+                <img src="../../assets/cart.svg" id="cart">
+            </a>
+        </li>
+    } @else {
+        <li>
+            <p>Crie a sua conta </p>
+        </li>
+        <li>
+            <p>Entre</p>
+        </li>
+        <li>
+            <p>Compras</p>
+        </li>
+        <li>
+            <a href="http://localhost:4200/">
+                <img src="../../assets/cart.svg" id="cart">
+            </a>
+        </li>
+    }
+    </div>
+    
+</ul>
